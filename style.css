@@ -2,15 +2,39 @@ body {
 	font-family: 'Nunito', sans-serif;
 }
 
+.header {
+	background-color: deepskyblue;
+}
 
 .navigation {
-	background-color: deepskyblue;
 	display: flex;
 	list-style: none;
 	justify-content: flex-end;
 	font-weight: 500;
 	letter-spacing: 2px;
-	}
+}
+
+.mobile-nav {
+	 padding: 1.3em;
+	 display:none;
+}
+
+.burger-btn {
+	position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.burger-btn	span {
+	display:block;
+	width: 19px;
+	height:3px;
+	margin: 4px 0;
+	background: rgb(244,244,244);
+	z-index: 99;
+}
 
 a {
 	color:white;
@@ -21,6 +45,10 @@ a {
 
 a:hover {
 	background: skyblue;
+}
+
+.expand {
+		display: block !important; 
 }
 
 .content {
@@ -40,11 +68,39 @@ a:hover {
     text-align: center;
 }
 
-.project-image {
+.image-container {
 	height:400px;
-	background-size: 100%;
+	position: relative;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+}
+
+.project-image {
+	flex-shrink:0;
+	height: 100%;
+	width: 100%;
 	background-repeat: no-repeat;
-	background-size: cover;
+
+}
+
+.image-cta {
+	position: absolute;
+	background: purple;
+	color: #fff;
+	top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 175px;
+}
+
+.image-container:hover .image-cta {
+	visibility: visible;
+	opacity: 1;
 }
 
 .project-desc {
@@ -53,14 +109,6 @@ a:hover {
 	flex-grow: 1;
 	justify-content: space-between;
 	padding: 20px;
-}
-
-#image-1 {
-	background-image: url('assets/yellowangry.png'); 
-}
-
-#image-2 {
-	background-image: url('assets/yellowangry.png'); 
 }
 
 @media (max-width: 800px) {
@@ -107,5 +155,13 @@ a:hover {
   	.project {
   		margin: 0px;
   	}
+
+  	.mobile-nav {
+  		display: inline-block;
+  	}
+
+  	.responsive-menu{
+		display: none;
+	}
 
 }
