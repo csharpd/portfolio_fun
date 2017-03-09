@@ -1,3 +1,8 @@
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
+
 .navigation {
 	background-color: deepskyblue;
 	display: flex;
@@ -5,8 +10,7 @@
 	justify-content: flex-end;
 	font-weight: 500;
 	letter-spacing: 2px;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
+	}
 
 a {
 	color:white;
@@ -24,17 +28,31 @@ a:hover {
 	flex-wrap: wrap;
 	margin: 0 auto;
 	justify-content: space-between;
+	background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 
 .project {
-	background-color: tomato;
-	color: white;
-	height: 500px;
+	background-color: white;
 	width: 47%;
 	margin: 10px;
 	font-weight: bold;
     font-size: 3em;
     text-align: center;
+}
+
+.project-image {
+	height:400px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.project-desc {
+	display:flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+	padding: 20px;
 }
 
 #image-1 {
@@ -43,7 +61,6 @@ a:hover {
 
 #image-2 {
 	background-image: url('assets/yellowangry.png'); 
-	background-size: 100%;
 }
 
 @media (max-width: 800px) {
@@ -81,6 +98,14 @@ a:hover {
 
   	.navigation li:last-of-type a {
   		border-bottom: none
+  	}
+
+  	.project-desc {
+  		display: none;
+  	}
+
+  	.project {
+  		margin: 0px;
   	}
 
 }
