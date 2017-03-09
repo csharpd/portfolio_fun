@@ -29,12 +29,21 @@ a:hover {
 .project {
 	background-color: tomato;
 	color: white;
-	height: 100px;
+	height: 500px;
 	width: 47%;
 	margin: 10px;
 	font-weight: bold;
     font-size: 3em;
     text-align: center;
+}
+
+#image-1 {
+	background-image: url('assets/yellowangry.png'); 
+}
+
+#image-2 {
+	background-image: url('assets/yellowangry.png'); 
+	background-size: 100%;
 }
 
 @media (max-width: 800px) {
