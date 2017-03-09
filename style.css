@@ -1,6 +1,14 @@
 body {
 	font-family: 'Nunito', sans-serif;
 }
+h1 { font-size: 24px;}
+h2 { font-size: 22px;}
+h3 { font-size: 18px;}
+h4 { 
+	font-size: 16px;
+}
+h5 { font-size: 12px;}
+h6 { font-size: 10px;}
 
 .header {
 	background-color: deepskyblue;
@@ -108,7 +116,16 @@ a:hover {
 	flex-direction: column;
 	flex-grow: 1;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 60px;
+}
+
+.project-desc h1 {
+	margin-bottom: 30px;
+}
+
+.project-desc h4 {
+	text-align: left;
+	line-height: 25px;
 }
 
 @media (max-width: 800px) {
